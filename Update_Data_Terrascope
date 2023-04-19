@@ -1,5 +1,7 @@
 # Data aquasition from terrascope virtual machine
 # Parameters: Tuebidity, chlorophy, SPM
+# Data length: 04.19 – 11.22, weekly
+
 
 import os
 import shutil
