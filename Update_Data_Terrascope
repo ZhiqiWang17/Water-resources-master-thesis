@@ -1,0 +1,39 @@
+# Data aquasition from terrascope virtual machine
+# Parameters: Tuebidity, chlorophy, SPM
+
+import os
+import shutil
+import fnmatch
+
+#Turbidity
+original = r"/home/zhiqi.wang/Desktop/data/TERRASCOPE_Sentinel2/TUR_V1/"
+target = r"/home/zhiqi.wang/Desktop/TUR_COC/"
+
+for root, dirs, files in os.walk(original):
+    for file in files:
+        if file.endswith("31UES_TUR_10M_V100.tif"):
+            shutil.copy(os.path.join(root, file), os.path.join(target, file))
+        next
+next
+
+#Chlorophy
+original = r"/home/zhiqi.wang/Desktop/data/TERRASCOPE_Sentinel2/CHL_V1/"
+target = r"/home/zhiqi.wang/Desktop/CHL_COC/"
+
+for root, dirs, files in os.walk(original):
+    for file in files:
+        if file.endswith("31UES_CHL_20M_V100.tif"):
+            shutil.copy(os.path.join(root, file), os.path.join(target, file))
+        next
+next
+
+#
+original = r"/home/zhiqi.wang/Desktop/data/TERRASCOPE_Sentinel2/SPM_V1/"
+target = r"/home/zhiqi.wang/Desktop/SPM_COC/"
+
+for root, dirs, files in os.walk(original):
+    for file in files:
+        if file.endswith("31UES_SPM_10M_V100.tif"):
+            shutil.copy(os.path.join(root, file), os.path.join(target, file))
+        next
+next
